@@ -1,11 +1,3 @@
-//
-//  MyViewController.swift
-//  PassData2
-//
-//  Created by L Khang on 7/21/20.
-//  Copyright © 2020 L Khang. All rights reserved.
-//
-
 import UIKit
 
 class FirstViewController: UIViewController {

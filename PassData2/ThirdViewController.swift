@@ -1,4 +1,3 @@
-
 import UIKit
 
 class ThirdViewController: UIViewController {
@@ -9,21 +8,19 @@ class ThirdViewController: UIViewController {
         super.viewDidLoad()
     }
 
-    @IBAction func backtoRoot(_ sender: Any) {
-        navigationController?.popToRootViewController(animated: true)
-    }
-    
+
     @IBAction func guiData(_ sender: Any) {
         navigationController?.popViewController(animated: true)
-       // delegate.hamTraVe("data tra ve") // dung delegate tra ve
-        hamTraVe2("data tra ve") // dung closure tra ve
+       // delegate.hamTraVe("data tra ve") // dung delegate tra ve second
+        hamTraVe2("data tra ve") // dung closure tra ve second
     }
 
+    // ham ban data ve 1
     @IBAction func troVe1(_ sender: Any) {
         navigationController?.popToRootViewController(animated: true) // tro ve goc
         NotificationCenter.default.post(name: FirstViewController.tbdata, object: nil, userInfo: ["data": "data tu 3"]) // gui thong tin
     }
 }
 protocol DataDelegate: class { // class protocol : protocol cho class : struct enum k ke thua
-    func hamTraVe(_ str: String)
+    func hamTraVe(_ str: String) // ham tra ve second
 }
