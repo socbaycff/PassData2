@@ -25,11 +25,15 @@ class FirstViewController: UIViewController {
         data.text = str
     }
     
-
+    deinit { // huy dang ky nhan thong bao luc denit
+        NotificationCenter.default.removeObserver(self, name: FirstViewController.tbdata, object: nil)
+    }
+    
+    // truyen data tu First -> Second
     @IBAction func next(_ sender: Any) {
         let secondvc = SecondViewController()
         secondvc.str = "data truyen"
-      //  self.present(secondvc, animated: true, completion: nil)
+      //  self.present(secondvc, animated: true, completion: nil) // chieu Vc kieu modal
         navigationController?.pushViewController(secondvc, animated: true)
     }
     
